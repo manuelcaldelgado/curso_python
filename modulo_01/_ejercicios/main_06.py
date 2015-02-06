@@ -1,4 +1,4 @@
-__author__ = 'yakari'
+__author__ = 'Manuel C. D.'
 
 # EJERCICIO 06
 #

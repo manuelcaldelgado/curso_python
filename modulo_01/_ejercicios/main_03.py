@@ -1,4 +1,4 @@
-__author__ = 'yakari'
+__author__ = 'Manuel C. D.'
 
 # EJERCICIO 03
 #
@@ -30,7 +30,11 @@ while seguir == "S" or seguir == "s":
     si_no = "sí"
 
     for aux in range(1, contador//2+1):
-        if lista_gen[aux-1] == "," or lista_gen[aux-1] == " " or lista_gen[aux-1] == "(" or lista_gen[aux-1] == "[":
+        # Antes tenía esta condicional:
+        #   if lista_gen[aux-1] == "," or lista_gen[aux-1] == " " or lista_gen[aux-1] == "(" or lista_gen[aux-1] == "[":
+        # El profesor me propuso cambiarla por las 2 siguientes líneas:
+        ignorados = [" ", ",", "(", ")", "[", "]"]
+        if lista_gen[aux-1] in ignorados:
             continue
         else:
             print("elemento  ", aux-1, ": ", lista_gen[aux-1])
@@ -47,5 +51,3 @@ while seguir == "S" or seguir == "s":
 
     seguir = input("Si quieres volver a probar, introduce (s/S): ")
     print("------------------------------------------------\n")
-
-
